@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    background-color: black; /* Solid black background */
+    color: white; /* Default text color */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  background-color: black;
+  padding: 15px 30px;
+ 
+  z-index: 1000;
+  top: 0%;
+ 
+  
+}
+
+.logo {
+  left: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 0.5s ease;
+  color: white;
+}
+
+.logo:hover{
+  transform: scale(1.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.nav li{
+  position: relative;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  color: aqua;
+}
+.nav-links li a::before{
+  content: "";
+  top: 100%;
+  width: 0;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover::before{
+  width: 100%;
+  background-color: aqua;
+}
+.nav-links .active::before{
+  width: 100%;
+  background-color: aqua;
+  color: aqua;
+ }
+
+ .nav-links .active{
+  color: aqua;
+}
+
+.discover-section {
+    text-align: center;
+    margin: 100px 0; /* Add margin to push content below the navbar */
+    color: white;
+}
+
+.species-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    padding: 20px;
+}
+
+.species-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.species-box:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.species-box img {
+    width: 100%;
+    border-radius: 10px; /* Rounded corners for images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.species-box h2 {
+    margin: 10px 0;
+    color: aqua;
+}
+
+.species-box p {
+    color: white;
+    font-weight: 300;
+}
